@@ -4,25 +4,25 @@
       <div class="form-group">
         <label for="spaceRoom" class="col-sm-8 control-label">Площадь помещения, кв м</label>
         <div class="col-sm-4">
-          <input type="number" class="form-control" id="spaceRoom" placeholder="25" name="spaceRoom" ng-model="room.space" required>
+          <input type="number" class="form-control" id="spaceRoom" placeholder="25" min="0" name="spaceRoom" ng-model="room.space" required>
         </div>
       </div>
       <div class="form-group">
         <label for="perimeterRoom" class="col-sm-8 control-label" >Периметр помещения,  м</label>
         <div class="col-sm-4">
-          <input type="number" class="form-control" id="perimeterRoom" name="perimeterRoom" ng-model="room.perimeter" placeholder="20" required>
+          <input type="number" class="form-control" id="perimeterRoom" min="0" name="perimeterRoom" ng-model="room.perimeter" placeholder="20" required>
         </div>
       </div>
       <div class="form-group">
         <label for="heightRoom" class="col-sm-8 control-label">Высота помещения,  м</label>
         <div class="col-sm-4">
-          <input type="number" class="form-control" id="heightRoom" name="heightRoom" ng-model="room.height" placeholder="2.5" step="0.1" required >
+          <input type="number" class="form-control" id="heightRoom" name="heightRoom" ng-model="room.height" placeholder="2.5" min="0" step="0.1" required >
         </div>
       </div>
       <div class="form-group">
         <label for="heightRoomlighting" class="col-sm-8 control-label">Высота замера освещенности,  м</label>
         <div class="col-sm-4">
-          <input type="number" class="form-control" id="heightRoomlighting" name="heightRoomlighting" ng-model="room.heightRoomLighting" placeholder="0.8" step="0.1" required>
+          <input type="number" class="form-control" id="heightRoomlighting" name="heightRoomlighting" ng-model="room.heightRoomLighting" placeholder="0.8" min="0" step="0.1" required>
         </div>
       </div>
       <div class="form-group">
@@ -81,13 +81,13 @@
         <label for="luminousFlux" class="col-sm-8 control-label" ng-hide="main.isTypeLed(room.lamp.typeLamp)">Световой поток лампы, лк</label>
         <label for="luminousFlux" class="col-sm-8 control-label" ng-show="main.isTypeLed(room.lamp.typeLamp)">Световой поток светильника, лк</label>
         <div class="col-sm-4">
-          <input type="number" class="form-control" id="luminousFlux" name="luminousFlux" ng-model="room.lamp.luminousFlux" placeholder="3390" step="10" required>
+          <input type="number" class="form-control" id="luminousFlux" name="luminousFlux" min="0" ng-model="room.lamp.luminousFlux" placeholder="3390" step="10" required>
         </div>
       </div>
       <div class="form-group">
         <label for="lampPower" class="col-sm-8 control-label">Мощность одной лампы, Вт</label>
         <div class="col-sm-4">
-          <input type="number" class="form-control" id="lampPower" name="lampPower" ng-model="room.lamp.power" placeholder="30" step="10" required>
+          <input type="number" class="form-control" id="lampPower" name="lampPower" ng-model="room.lamp.power" placeholder="30" min="0" step="10" required>
         </div>
       </div>
       <div class="form-group">
